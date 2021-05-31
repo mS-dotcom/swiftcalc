@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1. Sayı" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="DK7-Kb-0H2">
+                                <rect key="frame" x="106" y="249" width="203" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2. Sayı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76y-GC-p24">
+                                <rect key="frame" x="106" y="291" width="203" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-m2-mWy">
+                                <rect key="frame" x="111" y="356" width="37" height="30"/>
+                                <state key="normal" title="Topla"/>
+                                <connections>
+                                    <action selector="btnTopla:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpc-Cj-ypx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonuç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eK-Eq-SRV">
+                                <rect key="frame" x="166" y="421" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DK7-Kb-0H2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CoV-E2-ETc"/>
+                            <constraint firstItem="DK7-Kb-0H2" firstAttribute="trailing" secondItem="76y-GC-p24" secondAttribute="trailing" id="FMm-NK-MoS"/>
+                            <constraint firstItem="X1R-m2-mWy" firstAttribute="top" secondItem="76y-GC-p24" secondAttribute="bottom" constant="31" id="Lyv-r0-e9c"/>
+                            <constraint firstItem="DK7-Kb-0H2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="PDu-dV-FYA"/>
+                            <constraint firstItem="2eK-Eq-SRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="cYg-RE-IKo"/>
+                            <constraint firstItem="X1R-m2-mWy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="g39-88-pTu"/>
+                            <constraint firstItem="2eK-Eq-SRV" firstAttribute="top" secondItem="76y-GC-p24" secondAttribute="bottom" constant="96" id="mhB-Ce-RjZ"/>
+                            <constraint firstItem="76y-GC-p24" firstAttribute="top" secondItem="DK7-Kb-0H2" secondAttribute="bottom" constant="8" id="onJ-Rs-t1g"/>
+                            <constraint firstItem="DK7-Kb-0H2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="205" id="qgq-lL-okn"/>
+                            <constraint firstItem="DK7-Kb-0H2" firstAttribute="leading" secondItem="76y-GC-p24" secondAttribute="leading" id="ywA-HA-8FY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstNumber" destination="DK7-Kb-0H2" id="aax-qz-iCi"/>
+                        <outlet property="lblResult" destination="2eK-Eq-SRV" id="v6Y-ss-5Fz"/>
+                        <outlet property="secondNumber" destination="76y-GC-p24" id="OYu-BX-Hmy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
